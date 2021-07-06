@@ -8,7 +8,7 @@
 <meta name="keywords" content="Gridea静态个人博客">
 <meta name="description" content="我们的心就像那天空一样 永不分离">
 <meta name="theme-color" content="#000">
-<title>「Solution」P1225 黑白棋游戏 | Liuxizai</title>
+<title>「Notes」2021.7.3 | Liuxizai</title>
 <link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/AC-Stray/AC-Stray.GitHub.io@master/favicon.ico?v=1625566942282">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/AC-Stray/AC-Stray.GitHub.io@master/media/css/pisces.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/AC-Stray/AC-Stray.GitHub.io@master/media/fonts/font-awesome.css">
@@ -38,8 +38,8 @@
 
 
 
-  <meta name="description" content="「Solution」P1225 黑白棋游戏" />
-  <meta name="keywords" content="C++,Luogu,Solution" />
+  <meta name="description" content="「Notes」2021.7.3" />
+  <meta name="keywords" content="Computational Geometry,Notes,C++,Exam" />
 </head>
 
 <body>
@@ -281,15 +281,8 @@
     <ul class="markdownIt-TOC">
 <li>
 <ul>
-<li><a href="#%E4%BD%8D%E8%BF%90%E7%AE%97%E7%9A%84%E4%BD%BF%E7%94%A8">位运算的使用</a></li>
-<li><a href="#tip">Tip</a>
-<ul>
-<li><a href="#%E6%9C%AC%E9%A2%98%E4%B8%8D%E8%83%BD%E4%BD%BF%E7%94%A8getchar">本题不能使用getchar！</a></li>
-<li><a href="#%E6%9C%AC%E9%A2%98%E4%B8%8D%E8%83%BD%E4%BD%BF%E7%94%A8getchar-2">本题不能使用getchar！</a></li>
-<li><a href="#%E6%9C%AC%E9%A2%98%E4%B8%8D%E8%83%BD%E4%BD%BF%E7%94%A8getchar-3">本题不能使用getchar！</a></li>
-</ul>
-</li>
-<li><a href="#ac-code">AC CODE</a></li>
+<li><a href="#exam">Exam</a></li>
+<li><a href="#practice">Practice</a></li>
 </ul>
 </li>
 </ul>
@@ -557,8 +550,8 @@
           <div class="section bg-color post post-page">
             <section class="post-header">
   <h1 class="post-title">
-    <a class="post-title-link" href="https://liuxizai.ac.cn/post/solution-luogu-p1225-hei-bai-qi-you-xi/">
-      「Solution」P1225 黑白棋游戏
+    <a class="post-title-link" href="https://liuxizai.ac.cn/post/notes-202173/">
+      「Notes」2021.7.3
     </a>
   </h1>
   <div class="post-meta">
@@ -566,7 +559,7 @@
     <span class="meta-item pc-show">
       <i class="fa fa-calendar-o"></i>
       <span class="language" data-lan="publish">发布于</span>
-      <span class="publish-time" data-t="2020-11-14 17:39:05">2020-11-14</span>
+      <span class="publish-time" data-t="2021-07-06 18:19:55">2021-07-06</span>
       <span class="post-meta-divider pc-show">|</span>
     </span>
     
@@ -575,20 +568,26 @@
       <span class="pc-show language" data-lan="category-in">分类于</span>
       
       
+      <a href="https://liuxizai.ac.cn/tag/7mznb_aob/">
+        <span>Computational Geometry</span>
+      </a>、
+      
+      
+      
+      <a href="https://liuxizai.ac.cn/tag/-agdLduyk/">
+        <span>Notes</span>
+      </a>、
+      
+      
+      
       <a href="https://liuxizai.ac.cn/tag/_xW_42Ly8/">
         <span>C++</span>
       </a>、
       
       
       
-      <a href="https://liuxizai.ac.cn/tag/4TFmwnjHQ/">
-        <span>Luogu</span>
-      </a>、
-      
-      
-      
-      <a href="https://liuxizai.ac.cn/tag/vtp4VFVcn/">
-        <span>Solution</span>
+      <a href="https://liuxizai.ac.cn/tag/TLB1blfuX/">
+        <span>Exam</span>
       </a>
       
       
@@ -597,17 +596,17 @@
     
     <span class="meta-item">
       <i class="fa fa-clock-o"></i>
-      <span>6<span class="language" data-lan="minute">分钟</span></span>
+      <span>5<span class="language" data-lan="minute">分钟</span></span>
     </span>
     <span class="meta-item">
       <span class="post-meta-divider">|</span>
       <i class="fa fa-file-word-o"></i>
-      <span>1250<span class="pc-show language" data-lan="words">字数</span></span>
+      <span>804<span class="pc-show language" data-lan="words">字数</span></span>
     </span>
     
     
     
-    <span id="/post/solution-luogu-p1225-hei-bai-qi-you-xi/" data-flag-title="「Solution」P1225 黑白棋游戏" class="meta-item pc-show leancloud_visitors">
+    <span id="/post/notes-202173/" data-flag-title="「Notes」2021.7.3" class="meta-item pc-show leancloud_visitors">
       <span class="post-meta-divider">|</span>
       <i class="fa fa-eye"></i>
       <span><span class="language" data-lan="view">浏览量</span>：<span class="leancloud-visitors-count"></span></span>
@@ -616,175 +615,81 @@
   </div>
 </section>
             <div class="post-body next-md-body" id="post_body">
-              <p>关于这道题目的解法，其他题解已经讲得非常清楚，另外，我在代码中也做了简单的注释，应该很容易就能理解题目的做法。</p>
-<p>作为一道经典的位运算运用题目，我主要是想详细讲讲在这题中，位运算是如何使用的。</p>
-<!-- more -->
-<p>如果你没有接触过位运算，参考<a href="https://oi-wiki.org/math/bit/">OI-Wiki</a>。</p>
-<p><s>用了位运算才知道这东西有多爽</s></p>
-<h2 id="位运算的使用">位运算的使用</h2>
-<p>这道题目中，<code>bfs</code>肯定需要进行判重，那么位运算就有很大的优势，因为棋盘布局一共只有<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msup><mn>2</mn><mn>16</mn></msup></mrow><annotation encoding="application/x-tex">2^{16}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8141079999999999em;vertical-align:0em;"></span><span class="mord"><span class="mord">2</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">1</span><span class="mord mtight">6</span></span></span></span></span></span></span></span></span></span></span></span>种可能，而棋盘中每一个点恰好对应0或1，于是容易想到将四排棋盘状态压成一行，然后将其当做二进制转为十进制，用0到65535这65536个数对应每种状态。</p>
-<p>以下以样例为例，初始棋盘如下：</p>
-<pre><code>1111
-0000
-1110
-0010
-</code></pre>
-<p>将其先压成一行：</p>
-<pre><code>1111000011100010
-</code></pre>
-<p>这就是棋盘的状态的二进制码，将其转为十进制，即61666。</p>
-<p>为了方便进行位运算，我们为棋盘进行如下编号：</p>
-<pre><code>  0  1  2  3
-  4  5  6  7
-  8  9 10 11
- 12 13 14 15
-</code></pre>
-<p>我们需要进行的操作其实就是两种：</p>
+              <h2 id="exam">Exam</h2>
+<p>早上考的是非常基础的算法知识，应该说没有什么难度。</p>
+<p>T1就是非常经典的错排问题，容易想到递推式</p>
+<p class='katex-block'><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>D</mi><mi>n</mi></msub><mo>=</mo><mo>(</mo><mi>n</mi><mo>−</mo><mn>1</mn><mo>)</mo><mo>(</mo><msub><mi>D</mi><mrow><mi>n</mi><mo>−</mo><mn>1</mn></mrow></msub><mo>+</mo><msub><mi>D</mi><mrow><mi>n</mi><mo>−</mo><mn>2</mn></mrow></msub><mo>)</mo></mrow><annotation encoding="application/x-tex">D_n=(n-1)(D_{n-1}+D_{n-2})
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.02778em;">D</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:-0.02778em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">n</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord mathdefault">n</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">1</span><span class="mclose">)</span><span class="mopen">(</span><span class="mord"><span class="mord mathdefault" style="margin-right:0.02778em;">D</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.301108em;"><span style="top:-2.5500000000000003em;margin-left:-0.02778em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">n</span><span class="mbin mtight">−</span><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.208331em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.02778em;">D</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.301108em;"><span style="top:-2.5500000000000003em;margin-left:-0.02778em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">n</span><span class="mbin mtight">−</span><span class="mord mtight">2</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.208331em;"><span></span></span></span></span></span></span><span class="mclose">)</span></span></span></span></span></p>
+<p>直接递推就好了，复杂度<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>O</mi><mo>(</mo><mi>n</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">O(n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathdefault">n</span><span class="mclose">)</span></span></span></span>，完全没有问题。</p>
+<p>T2二分答案没有什么可说的。</p>
+<p>T3要求出一个序列中长度大于<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>k</mi></mrow><annotation encoding="application/x-tex">k</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.03148em;">k</span></span></span></span>的子序列所有元素平均值的最大值，考场上没有想出正解比较可惜，实际上也是二分答案。</p>
+<p>这里对原序列做一次前缀和得到<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>{</mo><msub><mi>S</mi><mi>n</mi></msub><mo>}</mo></mrow><annotation encoding="application/x-tex">\{S_n\}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">{</span><span class="mord"><span class="mord mathdefault" style="margin-right:0.05764em;">S</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:-0.05764em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">n</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">}</span></span></span></span>，我们二分一个答案，接下来就是要检查是否存在<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>l</mi><mo separator="true">,</mo><mi>r</mi><mo>(</mo><mi>l</mi><mo>&lt;</mo><mi>r</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">l,r(l&lt;r)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mopen">(</span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">&lt;</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mclose">)</span></span></span></span>使得</p>
+<p class='katex-block'><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mfrac><mrow><msub><mi>S</mi><mi>r</mi></msub><mo>−</mo><msub><mi>S</mi><mrow><mi>l</mi><mo>−</mo><mn>1</mn></mrow></msub></mrow><mrow><mi>r</mi><mo>−</mo><mi>l</mi><mo>+</mo><mn>1</mn></mrow></mfrac><mo>≥</mo><mi>m</mi><mi>i</mi><mi>d</mi></mrow><annotation encoding="application/x-tex">\frac{S_r-S_{l-1}}{r-l+1}\ge mid
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:2.1296600000000003em;vertical-align:-0.7693300000000001em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.36033em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord">1</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathdefault" style="margin-right:0.05764em;">S</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:-0.05764em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight" style="margin-right:0.02778em;">r</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.05764em;">S</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361079999999999em;"><span style="top:-2.5500000000000003em;margin-left:-0.05764em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight" style="margin-right:0.01968em;">l</span><span class="mbin mtight">−</span><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.208331em;"><span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.7693300000000001em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">≥</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathdefault">m</span><span class="mord mathdefault">i</span><span class="mord mathdefault">d</span></span></span></span></span></p>
+<p>这个式子可以化简</p>
+<p class='katex-block'><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mtable><mtr><mtd><mstyle scriptlevel="0" displaystyle="true"><mrow><msub><mi>S</mi><mi>r</mi></msub><mo>−</mo><msub><mi>S</mi><mrow><mi>l</mi><mo>−</mo><mn>1</mn></mrow></msub></mrow></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="true"><mrow><mrow></mrow><mo>≥</mo><mi>r</mi><mo>⋅</mo><mi>m</mi><mi>i</mi><mi>d</mi><mo>−</mo><mi>l</mi><mo>⋅</mo><mi>m</mi><mi>i</mi><mi>d</mi><mo>+</mo><mi>m</mi><mi>i</mi><mi>d</mi></mrow></mstyle></mtd></mtr><mtr><mtd><mstyle scriptlevel="0" displaystyle="true"><mrow><msub><mi>S</mi><mi>r</mi></msub><mo>−</mo><mi>r</mi><mo>⋅</mo><mi>m</mi><mi>i</mi><mi>d</mi></mrow></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="true"><mrow><mrow></mrow><mo>≥</mo><msub><mi>S</mi><mrow><mi>l</mi><mo>−</mo><mn>1</mn></mrow></msub><mo>−</mo><mo>(</mo><mi>l</mi><mo>−</mo><mn>1</mn><mo>)</mo><mi>m</mi><mi>i</mi><mi>d</mi></mrow></mstyle></mtd></mtr></mtable><annotation encoding="application/x-tex">\begin{aligned}
+S_r-S_{l-1}&amp;\ge r\cdot mid - l\cdot mid + mid \\
+S_r-r\cdot mid &amp;\ge S_{l-1}-(l-1)mid
+\end{aligned}
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:3.0000000000000004em;vertical-align:-1.2500000000000002em;"></span><span class="mord"><span class="mtable"><span class="col-align-r"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.7500000000000002em;"><span style="top:-3.91em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathdefault" style="margin-right:0.05764em;">S</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:-0.05764em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight" style="margin-right:0.02778em;">r</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.05764em;">S</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361079999999999em;"><span style="top:-2.5500000000000003em;margin-left:-0.05764em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight" style="margin-right:0.01968em;">l</span><span class="mbin mtight">−</span><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.208331em;"><span></span></span></span></span></span></span></span></span><span style="top:-2.41em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathdefault" style="margin-right:0.05764em;">S</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:-0.05764em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight" style="margin-right:0.02778em;">r</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">⋅</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord mathdefault">m</span><span class="mord mathdefault">i</span><span class="mord mathdefault">d</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.2500000000000002em;"><span></span></span></span></span></span><span class="col-align-l"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.7500000000000002em;"><span style="top:-3.91em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">≥</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">⋅</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord mathdefault">m</span><span class="mord mathdefault">i</span><span class="mord mathdefault">d</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">⋅</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord mathdefault">m</span><span class="mord mathdefault">i</span><span class="mord mathdefault">d</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord mathdefault">m</span><span class="mord mathdefault">i</span><span class="mord mathdefault">d</span></span></span><span style="top:-2.41em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">≥</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.05764em;">S</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361079999999999em;"><span style="top:-2.5500000000000003em;margin-left:-0.05764em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight" style="margin-right:0.01968em;">l</span><span class="mbin mtight">−</span><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.208331em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mopen">(</span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord">1</span><span class="mclose">)</span><span class="mord mathdefault">m</span><span class="mord mathdefault">i</span><span class="mord mathdefault">d</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.2500000000000002em;"><span></span></span></span></span></span></span></span></span></span></span></span></p>
+<p>所以我们只要对于所有<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>S</mi><mi>k</mi></msub></mrow><annotation encoding="application/x-tex">S_k</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.05764em;">S</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.33610799999999996em;"><span style="top:-2.5500000000000003em;margin-left:-0.05764em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight" style="margin-right:0.03148em;">k</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>计算出<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>A</mi><mi>k</mi></msub><mo>=</mo><msub><mi>S</mi><mi>k</mi></msub><mo>−</mo><mi>k</mi><mo>⋅</mo><mi>m</mi><mi>i</mi><mi>d</mi></mrow><annotation encoding="application/x-tex">A_k=S_k-k\cdot mid</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault">A</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.33610799999999996em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight" style="margin-right:0.03148em;">k</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.83333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.05764em;">S</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.33610799999999996em;"><span style="top:-2.5500000000000003em;margin-left:-0.05764em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight" style="margin-right:0.03148em;">k</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.03148em;">k</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">⋅</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathdefault">m</span><span class="mord mathdefault">i</span><span class="mord mathdefault">d</span></span></span></span>，然后检查<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>{</mo><msub><mi>A</mi><mi>n</mi></msub><mo>}</mo></mrow><annotation encoding="application/x-tex">\{A_n\}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">{</span><span class="mord"><span class="mord mathdefault">A</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">n</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">}</span></span></span></span>是否单减即可。</p>
+<p>看到分数就要想到二分答案然后把分母扔到式子的另一边乘开，然后看看能不能发现什么性质。</p>
+<p>T4填数独，直接一个启发式搜索就结束了。数独从空少的行开始填，非常常见的trick。</p>
+<h2 id="practice">Practice</h2>
+<p>主要是学了一下随机增量法。</p>
+<p>随机增量法用于解决平面上最小圆覆盖问题。</p>
+<p>具体操作流程：</p>
 <ol>
-<li>获取编号为<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>i</mi></mrow><annotation encoding="application/x-tex">i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.65952em;vertical-align:0em;"></span><span class="mord mathdefault">i</span></span></span></span>棋子的颜色</li>
-<li>交换编号为<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>i</mi></mrow><annotation encoding="application/x-tex">i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.65952em;vertical-align:0em;"></span><span class="mord mathdefault">i</span></span></span></span>和编号为<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>j</mi></mrow><annotation encoding="application/x-tex">j</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.85396em;vertical-align:-0.19444em;"></span><span class="mord mathdefault" style="margin-right:0.05724em;">j</span></span></span></span>的棋子</li>
+<li>取当前圆外一点<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>A</mi></mrow><annotation encoding="application/x-tex">A</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault">A</span></span></span></span>，将这一点作为圆心</li>
+<li>取当前圆外一点<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>B</mi></mrow><annotation encoding="application/x-tex">B</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.05017em;">B</span></span></span></span>，将<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>A</mi><mi>B</mi></mrow><annotation encoding="application/x-tex">AB</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault">A</span><span class="mord mathdefault" style="margin-right:0.05017em;">B</span></span></span></span>作为圆的半径</li>
+<li>取当前圆外一点<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>C</mi></mrow><annotation encoding="application/x-tex">C</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.07153em;">C</span></span></span></span>，将当前圆设为<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">△</mi><mi>A</mi><mi>B</mi><mi>C</mi></mrow><annotation encoding="application/x-tex">\triangle ABC</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mord">△</span><span class="mord mathdefault">A</span><span class="mord mathdefault" style="margin-right:0.05017em;">B</span><span class="mord mathdefault" style="margin-right:0.07153em;">C</span></span></span></span>的外接圆</li>
 </ol>
-<p>对于操作1，用位运算表示为：<code>(n &gt;&gt; (15 - i)) &amp; 1</code>。</p>
-<p>原理很简单，比如我们想获取样例中编号为3的棋子颜色，那么我们将3号棋子移动到第0位上，移动的位数即为<code>15 - i</code>位，所以就有了<code>n &gt;&gt; (15 - i)</code>。</p>
-<pre><code>1111(000011100010)
-</code></pre>
-<p>接下来，将其和<code>1</code>进行与运算，其实就是获得了第0位的数码。</p>
-<pre><code>1111 &amp; 0001 = 1
-</code></pre>
-<p>操作1就实现了，在程序中，<code>15 - i</code>被定义为了<code>ni</code>。</p>
-<p>对于操作2，用位运算表示为：<code>n + (1 &lt;&lt; (15 - j)) - (1 &lt;&lt; (15 - i))</code>。</p>
-<p>同样拿样例举例，我们想要将编号为1的棋子向下移动，即为将编号为1的棋子与编号为<code>1 + 4 = 5</code>的棋子互换。</p>
-<p>为方便进行位运算，我们在程序中约定，被移动棋子只能是黑棋，目标棋子只能是白棋。</p>
-<p>在二进制数当中，我们要做的就是将某一位上的<code>1</code>改成<code>0</code>，将某一位上的<code>0</code>改成<code>1</code>。</p>
-<p>很容易得到以下算式：</p>
-<p class='katex-block'><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>(</mo><mn>1111000011100010</mn><msub><mo>)</mo><mn>2</mn></msub><mo>−</mo><mo>(</mo><mn>100000000000000</mn><msub><mo>)</mo><mn>2</mn></msub><mo>+</mo><mo>(</mo><mn>10000000000</mn><msub><mo>)</mo><mn>2</mn></msub><mo>=</mo><mo>(</mo><mn>1011010011100010</mn><msub><mo>)</mo><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">(1111000011100010)_2 - (100000000000000)_2 + (10000000000)_2 = (1011010011100010)_2
-</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord">1</span><span class="mord">1</span><span class="mord">1</span><span class="mord">1</span><span class="mord">0</span><span class="mord">0</span><span class="mord">0</span><span class="mord">0</span><span class="mord">1</span><span class="mord">1</span><span class="mord">1</span><span class="mord">0</span><span class="mord">0</span><span class="mord">0</span><span class="mord">1</span><span class="mord">0</span><span class="mclose"><span class="mclose">)</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord">1</span><span class="mord">0</span><span class="mord">0</span><span class="mord">0</span><span class="mord">0</span><span class="mord">0</span><span class="mord">0</span><span class="mord">0</span><span class="mord">0</span><span class="mord">0</span><span class="mord">0</span><span class="mord">0</span><span class="mord">0</span><span class="mord">0</span><span class="mord">0</span><span class="mclose"><span class="mclose">)</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord">1</span><span class="mord">0</span><span class="mord">0</span><span class="mord">0</span><span class="mord">0</span><span class="mord">0</span><span class="mord">0</span><span class="mord">0</span><span class="mord">0</span><span class="mord">0</span><span class="mord">0</span><span class="mclose"><span class="mclose">)</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord">1</span><span class="mord">0</span><span class="mord">1</span><span class="mord">1</span><span class="mord">0</span><span class="mord">1</span><span class="mord">0</span><span class="mord">0</span><span class="mord">1</span><span class="mord">1</span><span class="mord">1</span><span class="mord">0</span><span class="mord">0</span><span class="mord">0</span><span class="mord">1</span><span class="mord">0</span><span class="mclose"><span class="mclose">)</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></span></p>
-<p>转换成位运算就是<code>n + (1 &lt;&lt; (15 - j)) - (1 &lt;&lt; (15 - i))</code>。</p>
-<p>这样，我们就能在程序中使用位运算进行棋盘上棋子的移动操作了。</p>
-<h2 id="tip">Tip</h2>
-<h3 id="本题不能使用getchar">本题不能使用getchar！</h3>
-<h3 id="本题不能使用getchar-2">本题不能使用getchar！</h3>
-<h3 id="本题不能使用getchar-3">本题不能使用getchar！</h3>
-<p><a href="https://www.luogu.com.cn/record/39461032">RE记录</a></p>
-<h2 id="ac-code">AC CODE</h2>
-<pre><code class="language-cpp">#include&lt;bits/stdc++.h&gt;
-using namespace std;
-struct node{
-	int n; // 当前棋盘 
-	int step; // 计步 
-	string way; // 记录操作 
-	node(int n, int step, string way): n(n), step(step), way(way) {}
-};
-int start, final, n, step, newn;
-char t;
-string way, newway;
-bool vis[65536];
-queue&lt;node&gt;q;
-int main(){
-	for(int i = 0; i &lt; 4; i++)
-		for(int j = 0; j &lt; 4; j++)
-			cin &gt;&gt; t, start = start * 2 + (int)(t-'0');
-	for(int i = 0; i &lt; 4; i++){
-		for(int j = 0; j &lt; 4; j++)
-			cin &gt;&gt; t, final = final * 2 + (int)(t-'0');
-		getchar();
+<p>模板（<a href="https://www.luogu.com.cn/problem/P1742">LuoguP1742 最小圆覆盖</a>）</p>
+<pre><code class="language-cpp">namespace Main{
+	int n;
+	double r;
+	struct point{
+		double x, y;
+		point() {}
+		point(double x, double y): x(x), y(y) {}
+	}a[N], o;
+	inline double dis(point a, point b){
+		return sqrt((a.x-b.x) * (a.x-b.x) + (a.y-b.y) * (a.y-b.y));
 	}
-	q.push(node(start, 0, &quot;&quot;));
-	vis[start] = true;
-	while(!q.empty()){
-		n = q.front().n, step = q.front().step, way = q.front().way;
-		if(n == final){
-			cout &lt;&lt; step;
-			for(int i = 0; i &lt; (signed)way.size(); i++){
-				if(i % 4 == 0) cout &lt;&lt; endl;
-				cout &lt;&lt; way[i];
-			}
-			return 0;
-		}
-		step++;
-		q.pop();
-		for(int i = 0; i &lt; 16; i++){
-			int ni = 15 - i;
-			if(((n &gt;&gt; ni) &amp; 1) == 0) continue; // 被移动棋只选黑棋 
-			// 左移 
-			if(i % 4 != 0){ // 棋子不能位于棋盘第一列 
-				int j = ni + 1;
-				if(((n &gt;&gt; j) &amp; 1) == 0){ // 目标棋应是白棋 
-					newn = n + (1 &lt;&lt; j) - (1 &lt;&lt; ni);
-					if(!vis[newn]){
-						vis[newn] = true;
-						newway = way + (char)(i/4+1+'0');
-						newway += (char)(i%4+1+'0');
-						newway += (char)((15-j)/4+1+'0');
-						newway += (char)((15-j)%4+1+'0');
-						q.push(node(newn, step, newway));
-					}
-				} 
-			}
-			// 右移 
-			if(i % 4 != 3){ // 棋子不能位于棋盘第四列
-				int j = ni - 1;
-				if(((n &gt;&gt; j) &amp; 1) == 0){
-					newn = n + (1 &lt;&lt; j) - (1 &lt;&lt; ni);
-					if(!vis[newn]){
-						vis[newn] = true;
-						newway = way + (char)(i/4+1+'0');
-						newway += (char)(i%4+1+'0');
-						newway += (char)((15-j)/4+1+'0');
-						newway += (char)((15-j)%4+1+'0');
-						q.push(node(newn, step, newway));
-					}
-				} 
-			}
-			// 上移 
-			if(i &gt;= 4){ // 棋子不能位于棋盘第一行 
-				int j = ni + 4;
-				if(((n &gt;&gt; j) &amp; 1) == 0){
-					newn = n + (1 &lt;&lt; j) - (1 &lt;&lt; ni);
-					if(!vis[newn]){
-						vis[newn] = true;
-						newway = way + (char)(i/4+1+'0');
-						newway += (char)(i%4+1+'0');
-						newway += (char)((15-j)/4+1+'0');
-						newway += (char)((15-j)%4+1+'0');
-						q.push(node(newn, step, newway));
-					}
-				} 
-			}
-			// 下移
-			if(i &lt;= 11){ // 棋子不能位于棋盘第四行 
-				int j = ni - 4;
-				if(((n &gt;&gt; j) &amp; 1) == 0){
-					newn = n + (1 &lt;&lt; j) - (1 &lt;&lt; ni);
-					if(!vis[newn]){
-						vis[newn] = true;
-						newway = way + (char)(i/4+1+'0');
-						newway += (char)(i%4+1+'0');
-						newway += (char)((15-j)/4+1+'0');
-						newway += (char)((15-j)%4+1+'0');
-						q.push(node(newn, step, newway));
-					}
-				} 
-			} 
-		}
+	inline pair&lt;point, double&gt; getCircle(point a, point b, point c){
+		double a1 = 2 * (b.x - a.x), a2 = 2 * (c.x - a.x);
+		double b1 = 2 * (b.y - a.y), b2 = 2 * (c.y - a.y);
+		double c1 = b.x*b.x - a.x*a.x + b.y*b.y - a.y*a.y;
+		double c2 = c.x*c.x - a.x*a.x + c.y*c.y - a.y*a.y;
+		double x = (b1 * c2 - b2 * c1) / (b1 * a2 - b2 * a1);
+		double y = (a1 * c2 - a2 * c1) / (a1 * b2 - a2 * b1);
+		double r = dis(a, point(x, y));
+		return make_pair(point(x, y), r);
 	}
-}
-/*
-1111
-0000
-1110
-0010
-1010
-0101
-1010
-0101
-*/
+	Bool inCircle(point a){
+		return dis(a, o) &lt;= r;
+	}
+	void Main(){
+		input(n);
+		for(ri i = 0; i &lt; n; i++) cin &gt;&gt; a[i].x &gt;&gt; a[i].y;
+		random_shuffle(a, a + n);
+		for(ri i = 0; i &lt; n; i++) if(!inCircle(a[i])){
+			o = a[i];
+			for(ri j = 0; j &lt; i; j++) if(!inCircle(a[j])){
+				o = point((a[i].x + a[j].x) / 2, (a[i].y + a[j].y) / 2);
+				r = dis(o, a[j]);
+				for(ri k = 0; k &lt; j; k++) if(!inCircle(a[k])){
+					pair&lt;point, double&gt; res = getCircle(a[i], a[j] ,a[k]);
+					o = res.first;
+					r = res.second;
+				}
+			}
+		}
+		cout &lt;&lt; fixed &lt;&lt; setprecision(10) &lt;&lt; r &lt;&lt; endl &lt;&lt; o.x &lt;&lt; ' ' &lt;&lt; o.y;
+		return;
+	}
+} // namespace
 </code></pre>
-<p><a href="https://www.luogu.com.cn/record/39461528">AC记录</a></p>
-<ul>
-<li>用时：59ms</li>
-<li>空间：1.00MB</li>
-</ul>
 
             </div>
             
@@ -801,7 +706,7 @@ int main(){
     </li>
     <li class="post-copyright-link">
       <strong class="language" data-lan="link">本文链接：</strong>
-      <a href="https://liuxizai.ac.cn/post/solution-luogu-p1225-hei-bai-qi-you-xi/" title="「Solution」P1225 黑白棋游戏">https://liuxizai.ac.cn/post/solution-luogu-p1225-hei-bai-qi-you-xi/</a>
+      <a href="https://liuxizai.ac.cn/post/notes-202173/" title="「Notes」2021.7.3">https://liuxizai.ac.cn/post/notes-202173/</a>
     </li>
     <li class="post-copyright-license">
       <strong class="language" data-lan="copyright">版权声明： </strong>
@@ -810,25 +715,27 @@ int main(){
   </ul>
   <div class="tags">
     
+      <a href="https://liuxizai.ac.cn/tag/7mznb_aob/"># Computational Geometry</a>
+    
+      <a href="https://liuxizai.ac.cn/tag/-agdLduyk/"># Notes</a>
+    
       <a href="https://liuxizai.ac.cn/tag/_xW_42Ly8/"># C++</a>
     
-      <a href="https://liuxizai.ac.cn/tag/4TFmwnjHQ/"># Luogu</a>
-    
-      <a href="https://liuxizai.ac.cn/tag/vtp4VFVcn/"># Solution</a>
+      <a href="https://liuxizai.ac.cn/tag/TLB1blfuX/"># Exam</a>
     
   </div>
   <div class="nav">
     <div class="nav-prev">
       
         <i class="fa fa-chevron-left"></i>
-        <a class="nav-pc-next" title="「游记」CSP-S 2020" href="https://liuxizai.ac.cn/post/you-ji-csp-s-2020/">「游记」CSP-S 2020</a class="nav-pc-next">
-        <a class="nav-mobile-prev" title="「游记」CSP-S 2020" href="https://liuxizai.ac.cn/post/you-ji-csp-s-2020/">上一篇</a>
+        <a class="nav-pc-next" title="「Notes」2021.7.4" href="https://liuxizai.ac.cn/post/notes-202174/">「Notes」2021.7.4</a class="nav-pc-next">
+        <a class="nav-mobile-prev" title="「Notes」2021.7.4" href="https://liuxizai.ac.cn/post/notes-202174/">上一篇</a>
       
     </div>
     <div class="nav-next">
       
-        <a class="nav-pc-next" title="「Solution」华一高ks10.5 T2 &amp; P1970 花匠" href="https://liuxizai.ac.cn/post/solution-hua-yi-gao-ks105-t2-and-p1970-hua-jiang/">「Solution」华一高ks10.5 T2 &amp; P1970 花匠</a>
-        <a class="nav-mobile-next" title="「Solution」华一高ks10.5 T2 &amp; P1970 花匠" href="https://liuxizai.ac.cn/post/solution-hua-yi-gao-ks105-t2-and-p1970-hua-jiang/">下一篇</a>
+        <a class="nav-pc-next" title="「游记」2021 HBOI" href="https://liuxizai.ac.cn/post/you-ji-2021-hboi/">「游记」2021 HBOI</a>
+        <a class="nav-mobile-next" title="「游记」2021 HBOI" href="https://liuxizai.ac.cn/post/you-ji-2021-hboi/">下一篇</a>
         <i class="fa fa-chevron-right"></i>
       
     </div>
