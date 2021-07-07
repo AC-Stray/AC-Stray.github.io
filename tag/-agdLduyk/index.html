@@ -9,7 +9,7 @@
 <meta name="description" content="我们的心就像那天空一样 永不分离">
 <meta name="theme-color" content="#000">
 <title>Liuxizai</title>
-<link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/AC-Stray/AC-Stray.GitHub.io@master/favicon.ico?v=1625626178127">
+<link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/AC-Stray/AC-Stray.GitHub.io@master/favicon.ico?v=1625626443764">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/AC-Stray/AC-Stray.GitHub.io@master/media/css/pisces.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/AC-Stray/AC-Stray.GitHub.io@master/media/fonts/font-awesome.css">
 <link
@@ -816,66 +816,66 @@ struct ACAM{
 &lt;p&gt;（&lt;a href=&#34;https://www.luogu.com.cn/problem/P5357&#34;&gt;LuoguP5357 AC自动机 二次加强版&lt;/a&gt;）&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&#34;language-cpp&#34;&gt;namespace Main{
     const int N = 200005;
-	const int L = 2000005;
-	const int ACAM_SIZE = 200005;
-	struct ACAM{
-		int cnt, match[ACAM_SIZE], ch[ACAM_SIZE][30], fail[ACAM_SIZE];
-		void clear(){
-			cnt = 0;
-			memset(ch, 0, sizeof(ch));
-		}
-		void build(char *s, int k){
-			int len = strlen(s), p = 0;
-			for(ri i = 0; i &amp;lt; len; i++){
-				if(!ch[p][s[i]-&#39;a&#39;]) ch[p][s[i]-&#39;a&#39;] = ++cnt;
-				p = ch[p][s[i]-&#39;a&#39;];
-			}
-			match[k] = p;
-		}
-		void getfail(){
-			queue&amp;lt;int&amp;gt; q;
-			for(ri i = 0; i &amp;lt; 26; i++){
-				if(ch[0][i]) fail[ch[0][i]] = 0, q.push(ch[0][i]);
-				else fail[ch[0][i]] = 0;
-			}
-			while(!q.empty()){
-				int now = q.front(); q.pop();
-				for(ri i = 0; i &amp;lt; 26; i++){
-					if(ch[now][i]){
-						fail[ch[now][i]] = ch[fail[now]][i];
-						q.push(ch[now][i]);
-					}
-					else ch[now][i] = ch[fail[now]][i];
-				}
-			}
-		}
-	}AC;
-	int n, siz[N];
-	char s[L];
-	vector&amp;lt;int&amp;gt; g[N];
-	void dfs(int u){
-		for(ri i = 0; i &amp;lt; g[u].size(); i++){
-			int v = g[u][i];
-			dfs(v);
-			siz[u] += siz[v];
-		}
-	}
-	void Main(){
-		AC.clear();
-		input(n);
-		for(ri i = 0; i &amp;lt; n; i++) scanf(&amp;quot;%s&amp;quot;, s), AC.build(s, i);
-		AC.getfail();
-		for(ri i = 1; i &amp;lt;= AC.cnt; i++) g[AC.fail[i]].push_back(i);
-		scanf(&amp;quot;%s&amp;quot;, s);
-		int len = strlen(s);
-		for(ri i = 0, p = 0; i &amp;lt; len; i++){
-			p = AC.ch[p][s[i]-&#39;a&#39;];
-			siz[p]++;
-		} 
-		dfs(0);
-		for(ri i = 0; i &amp;lt; n; i++) write(siz[AC.match[i]]), puts(&amp;quot;&amp;quot;);
-		return;
-	}
+    const int L = 2000005;
+    const int ACAM_SIZE = 200005;
+    struct ACAM{
+        int cnt, match[ACAM_SIZE], ch[ACAM_SIZE][30], fail[ACAM_SIZE];
+        void clear(){
+            cnt = 0;
+            memset(ch, 0, sizeof(ch));
+        }
+        void build(char *s, int k){
+            int len = strlen(s), p = 0;
+            for(ri i = 0; i &amp;lt; len; i++){
+                if(!ch[p][s[i]-&#39;a&#39;]) ch[p][s[i]-&#39;a&#39;] = ++cnt;
+                p = ch[p][s[i]-&#39;a&#39;];
+            }
+            match[k] = p;
+        }
+        void getfail(){
+            queue&amp;lt;int&amp;gt; q;
+            for(ri i = 0; i &amp;lt; 26; i++){
+                if(ch[0][i]) fail[ch[0][i]] = 0, q.push(ch[0][i]);
+                else fail[ch[0][i]] = 0;
+            }
+            while(!q.empty()){
+                int now = q.front(); q.pop();
+                for(ri i = 0; i &amp;lt; 26; i++){
+                    if(ch[now][i]){
+                        fail[ch[now][i]] = ch[fail[now]][i];
+                        q.push(ch[now][i]);
+                    }
+                    else ch[now][i] = ch[fail[now]][i];
+                }
+            }
+        }
+    }AC;
+    int n, siz[N];
+    char s[L];
+    vector&amp;lt;int&amp;gt; g[N];
+    void dfs(int u){
+        for(ri i = 0; i &amp;lt; g[u].size(); i++){
+            int v = g[u][i];
+            dfs(v);
+            siz[u] += siz[v];
+        }
+    }
+    void Main(){
+        AC.clear();
+        input(n);
+        for(ri i = 0; i &amp;lt; n; i++) scanf(&amp;quot;%s&amp;quot;, s), AC.build(s, i);
+        AC.getfail();
+        for(ri i = 1; i &amp;lt;= AC.cnt; i++) g[AC.fail[i]].push_back(i);
+        scanf(&amp;quot;%s&amp;quot;, s);
+        int len = strlen(s);
+        for(ri i = 0, p = 0; i &amp;lt; len; i++){
+            p = AC.ch[p][s[i]-&#39;a&#39;];
+            siz[p]++;
+        } 
+        dfs(0);
+        for(ri i = 0; i &amp;lt; n; i++) write(siz[AC.match[i]]), puts(&amp;quot;&amp;quot;);
+        return;
+    }
 } // namespace
 &lt;/code&gt;&lt;/pre&gt;
 ">「Notes」2021.7.5</a>
