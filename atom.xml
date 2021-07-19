@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://liuxizai.ac.cn</id>
     <title>Liuxizai</title>
-    <updated>2021-07-19T08:35:09.982Z</updated>
+    <updated>2021-07-19T08:36:38.685Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://liuxizai.ac.cn"/>
     <link rel="self" href="https://liuxizai.ac.cn/atom.xml"/>
@@ -16,8 +16,12 @@
         <link href="https://liuxizai.ac.cn/post/notes-cpp14/">
         </link>
         <updated>2021-07-19T08:30:07.000Z</updated>
+        <summary type="html"><![CDATA[<p>基于 Ubuntu 20.04 的 NOI 2.0 发布后，我们或许有机会开始使用 C++14。</p>
+<p>这篇 Blog 将对 OI 中可能会使用到的 C++14 的新特性进行简要总结。</p>
+]]></summary>
         <content type="html"><![CDATA[<p>基于 Ubuntu 20.04 的 NOI 2.0 发布后，我们或许有机会开始使用 C++14。</p>
 <p>这篇 Blog 将对 OI 中可能会使用到的 C++14 的新特性进行简要总结。</p>
+<!-- more -->
 <blockquote>
 <p>由于大部分 OIer <s>被 CCF 迫害</s>可能是 C++98 转 C++14，文中部分特性实际上是来源于 C++11 标准的。</p>
 <p>另一个重要原因是，C++14 并不是 C++ 的一个主要版本（主要版本：C++03 C++11 C++17），其被认为是 C++11 一个更加完善的版本，C++11 这一更新经历了整整8年时间，引入了大量更改，可以说是 C++98 以来最重要的更新，所以提到 C++11 的特性确实很有必要。</p>
