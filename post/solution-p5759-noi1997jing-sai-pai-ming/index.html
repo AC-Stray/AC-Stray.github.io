@@ -9,7 +9,7 @@
 <meta name="description" content="我们的心就像那天空一样 永不分离">
 <meta name="theme-color" content="#000">
 <title>「Solution」P5759 [NOI1997]竞赛排名 | Liuxizai</title>
-<link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/AC-Stray/AC-Stray.GitHub.io@master/favicon.ico?v=1626684192257">
+<link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/AC-Stray/AC-Stray.GitHub.io@master/favicon.ico?v=1626684632960">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/AC-Stray/AC-Stray.GitHub.io@master/media/css/pisces.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/AC-Stray/AC-Stray.GitHub.io@master/media/fonts/font-awesome.css">
 <link
@@ -1277,7 +1277,6 @@ int main(){
         <a class="result-title" style="opacity: 0;" href="https://liuxizai.ac.cn/post/notes-cpp14/"" data-c="
           &lt;p&gt;基于 Ubuntu 20.04 的 NOI 2.0 发布后，我们或许有机会开始使用 C++14。&lt;/p&gt;
 &lt;p&gt;这篇 Blog 将对 OI 中可能会使用到的 C++14 的新特性进行简要总结。&lt;/p&gt;
-&lt;!-- more --&gt;
 &lt;blockquote&gt;
 &lt;p&gt;由于大部分 OIer &lt;s&gt;被 CCF 迫害&lt;/s&gt;可能是 C++98 转 C++14，文中部分特性实际上是来源于 C++11 标准的。&lt;/p&gt;
 &lt;p&gt;另一个重要原因是，C++14 并不是 C++ 的一个主要版本（主要版本：C++03 C++11 C++17），其被认为是 C++11 一个更加完善的版本，C++11 这一更新经历了整整8年时间，引入了大量更改，可以说是 C++98 以来最重要的更新，所以提到 C++11 的特性确实很有必要。&lt;/p&gt;
@@ -1328,7 +1327,7 @@ int a = 10; // yes
 &lt;/ul&gt;
 &lt;p&gt;为了方便 OIer 理解，以上内容并不完全准确&lt;sup class=&#34;footnote-ref&#34;&gt;&lt;a href=&#34;#fn1&#34; id=&#34;fnref1&#34;&gt;[1]&lt;/a&gt;&lt;/sup&gt;。&lt;/p&gt;
 &lt;h2 id=&#34;lambda&#34;&gt;lambda&lt;/h2&gt;
-&lt;p&gt;C++11 中允许使用匿名函数，其能够内联于语句中&lt;/p&gt;
+&lt;p&gt;C++11 中允许使用匿名函数，其能够内联于语句中&lt;sup class=&#34;footnote-ref&#34;&gt;&lt;a href=&#34;#fn2&#34; id=&#34;fnref2&#34;&gt;[2]&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&#34;language-cpp&#34;&gt;struct node { int x, y; };
 std::vector&amp;lt;node&amp;gt; arr;
 
@@ -1353,12 +1352,12 @@ std::sort(arr.begin(), arr.end(), [](node a, node b){ return a.x &amp;lt; b.x; }
 &lt;li&gt;&lt;code&gt;[&amp;amp;, list]&lt;/code&gt;  - &lt;code&gt;list&lt;/code&gt; 是一个逗号分割的列表，列表中的变量以值方式捕获，其他局部变量隐式的以引用方式捕获。&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;[=, list]&lt;/code&gt; - &lt;code&gt;list&lt;/code&gt; 是一个逗号分割的列表，列表中的变量以引用方式捕获，其他局部变量隐式的以值方式捕获。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;C++14 标准中规定了泛型 &lt;code&gt;lambda&lt;/code&gt;，由于过于复杂，选择不将其写入 Blog&lt;sup class=&#34;footnote-ref&#34;&gt;&lt;a href=&#34;#fn2&#34; id=&#34;fnref2&#34;&gt;[2]&lt;/a&gt;&lt;/sup&gt;。&lt;/p&gt;
+&lt;p&gt;C++14 标准中规定了泛型 &lt;code&gt;lambda&lt;/code&gt;，由于过于复杂，选择不将其写入 Blog&lt;sup class=&#34;footnote-ref&#34;&gt;&lt;a href=&#34;#fn3&#34; id=&#34;fnref3&#34;&gt;[3]&lt;/a&gt;&lt;/sup&gt;。&lt;/p&gt;
 &lt;p&gt;另外，你会发现匿名函数没有规定返回值，编译器将会自行判断函数的返回值，如果需要指定函数返回值，可以使用以下语法&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&#34;language-cpp&#34;&gt;[捕获](形参)-&amp;gt;返回值类型 {函数体}
 &lt;/code&gt;&lt;/pre&gt;
 &lt;h2 id=&#34;变量模板variable-template&#34;&gt;变量模板（variable template）&lt;/h2&gt;
-&lt;p&gt;C++14 允许通过变量模板定义一族变量。&lt;/p&gt;
+&lt;p&gt;C++14 允许通过变量模板定义一族变量&lt;sup class=&#34;footnote-ref&#34;&gt;&lt;a href=&#34;#fn4&#34; id=&#34;fnref4&#34;&gt;[4]&lt;/a&gt;&lt;/sup&gt;。&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&#34;language-cpp&#34;&gt;template&amp;lt;typename T&amp;gt; // variable template
 const T pi = T(3.14159265);
 
@@ -1368,7 +1367,7 @@ T circleArea(T r){
 }
 &lt;/code&gt;&lt;/pre&gt;
 &lt;h2 id=&#34;聚合初始化aggregate-initialization&#34;&gt;聚合初始化（aggregate initialization）&lt;/h2&gt;
-&lt;p&gt;聚合初始化是 C++11 中列表初始化&lt;sup class=&#34;footnote-ref&#34;&gt;&lt;a href=&#34;#fn3&#34; id=&#34;fnref3&#34;&gt;[3]&lt;/a&gt;&lt;/sup&gt;的一种形式。&lt;/p&gt;
+&lt;p&gt;聚合初始化是 C++11 中列表初始化&lt;sup class=&#34;footnote-ref&#34;&gt;&lt;a href=&#34;#fn5&#34; id=&#34;fnref5&#34;&gt;[5]&lt;/a&gt;&lt;/sup&gt;的一种形式。&lt;/p&gt;
 &lt;p&gt;首先，聚合体是下列类型之一：&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;数组类型&lt;/li&gt;
@@ -1421,7 +1420,7 @@ e = 4;
 f = {5, 6};
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;在 C++11 中，聚合初始化要求类成员没有默认初始化器（&lt;code&gt;int a = 10&lt;/code&gt;），但在 C++14 中允许我们这么做，所以另外很重要的一点是，当聚合初始化与默认初始化器结合时，到底会产生怎么样的结果。&lt;/p&gt;
-&lt;p&gt;举个例子说明&lt;sup class=&#34;footnote-ref&#34;&gt;&lt;a href=&#34;#fn4&#34; id=&#34;fnref4&#34;&gt;[4]&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;p&gt;举个例子说明&lt;sup class=&#34;footnote-ref&#34;&gt;&lt;a href=&#34;#fn6&#34; id=&#34;fnref6&#34;&gt;[6]&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&#34;language-cpp&#34;&gt;struct A {
     struct B {
         int a = 21;
@@ -1458,7 +1457,7 @@ b2.c = 13;
 b2.d = 0;
 b2.e = 23;
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;初始化器提供的值比类成员少时，根据 N3605&lt;sup class=&#34;footnote-ref&#34;&gt;&lt;a href=&#34;#fn5&#34; id=&#34;fnref5&#34;&gt;[5]&lt;/a&gt;&lt;/sup&gt;，C++14 会采用如下策略&lt;/p&gt;
+&lt;p&gt;初始化器提供的值比类成员少时，根据 N3605&lt;sup class=&#34;footnote-ref&#34;&gt;&lt;a href=&#34;#fn7&#34; id=&#34;fnref7&#34;&gt;[7]&lt;/a&gt;&lt;/sup&gt;，C++14 会采用如下策略&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;从成员的默认初始化器进行初始化&lt;/li&gt;
 &lt;li&gt;如果没有默认初始化器，用一个空初始化器列表进行初始化&lt;/li&gt;
@@ -1466,7 +1465,7 @@ b2.e = 23;
 &lt;p&gt;那么，我们在对 &lt;code&gt;a&lt;/code&gt; 进行聚合初始化时， 实际上为 &lt;code&gt;b2&lt;/code&gt; 提供了值 &lt;code&gt;{1}&lt;/code&gt;，所以 &lt;code&gt;b2&lt;/code&gt; 的初始化器&lt;strong&gt;完全失效&lt;/strong&gt;，接下来，&lt;code&gt;b2.a&lt;/code&gt; 从聚合初始化中的到了值，其他成员没有得到值，所以隐式的按照 N3605 进行初始化。&lt;/p&gt;
 &lt;p&gt;这正是我们得到的结果。&lt;/p&gt;
 &lt;h2 id=&#34;auto&#34;&gt;auto&lt;/h2&gt;
-&lt;p&gt;&lt;code&gt;auto&lt;/code&gt; 于 C++11 引入作为占位类型说明符，其能够从初始化器自动推导变量类型。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;auto&lt;/code&gt; 于 C++11 引入作为占位类型说明符，其能够从初始化器自动推导变量类型&lt;sup class=&#34;footnote-ref&#34;&gt;&lt;a href=&#34;#fn8&#34; id=&#34;fnref8&#34;&gt;[8]&lt;/a&gt;&lt;/sup&gt;。&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&#34;language-cpp&#34;&gt;auto a = 12;        // int
 auto b = 2 + 4 * 7; // int
 auto c = 0.17;      // double
@@ -1494,9 +1493,9 @@ auto y = 10; // ok
 &lt;blockquote&gt;
 &lt;p&gt;&lt;code&gt;auto x;&lt;/code&gt; 这种写法在 C 中被允许。&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;如果想要了解更多，可以参考 cppreference&lt;sup class=&#34;footnote-ref&#34;&gt;&lt;a href=&#34;#fn6&#34; id=&#34;fnref6&#34;&gt;[6]&lt;/a&gt;&lt;/sup&gt;。&lt;/p&gt;
+&lt;p&gt;如果想要了解更多，可以参考 cppreference&lt;sup class=&#34;footnote-ref&#34;&gt;&lt;a href=&#34;#fn9&#34; id=&#34;fnref9&#34;&gt;[9]&lt;/a&gt;&lt;/sup&gt;。&lt;/p&gt;
 &lt;h2 id=&#34;基于范围的-for-循环range-based-for-loop&#34;&gt;基于范围的 for 循环（range-based for loop）&lt;/h2&gt;
-&lt;p&gt;C++11 规定了基于范围的 &lt;code&gt;for&lt;/code&gt; 循环，其在一个范围上执行 &lt;code&gt;for&lt;/code&gt; 循环，是传统 &lt;code&gt;for&lt;/code&gt; 循环一个更加可读的等价版本，OI 中常用于图遍历。&lt;/p&gt;
+&lt;p&gt;C++11 规定了基于范围的 &lt;code&gt;for&lt;/code&gt; 循环，其在一个范围上执行 &lt;code&gt;for&lt;/code&gt; 循环，是传统 &lt;code&gt;for&lt;/code&gt; 循环一个更加可读的等价版本&lt;sup class=&#34;footnote-ref&#34;&gt;&lt;a href=&#34;#fn10&#34; id=&#34;fnref10&#34;&gt;[10]&lt;/a&gt;&lt;/sup&gt;，OI 中常用于图遍历。&lt;/p&gt;
 &lt;p&gt;其语法如下&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&#34;language-cpp&#34;&gt;[属性-可选]
 for(范围声明: 范围表达式){
@@ -1504,7 +1503,7 @@ for(范围声明: 范围表达式){
 }
 &lt;/code&gt;&lt;/pre&gt;
 &lt;blockquote&gt;
-&lt;p&gt;属性：属性说明符序列&lt;sup class=&#34;footnote-ref&#34;&gt;&lt;a href=&#34;#fn7&#34; id=&#34;fnref7&#34;&gt;[7]&lt;/a&gt;&lt;/sup&gt;，不在 Blog 中进行说明，几乎不会用到。&lt;/p&gt;
+&lt;p&gt;属性：属性说明符序列&lt;sup class=&#34;footnote-ref&#34;&gt;&lt;a href=&#34;#fn11&#34; id=&#34;fnref11&#34;&gt;[11]&lt;/a&gt;&lt;/sup&gt;，不在 Blog 中进行说明，几乎不会用到。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;ul&gt;
 &lt;li&gt;
@@ -1525,7 +1524,7 @@ for(范围声明: 范围表达式){
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;其中，对于数组 &lt;code&gt;a[]&lt;/code&gt;，其首表达式为 &lt;code&gt;a&lt;/code&gt;，尾表达式为 &lt;code&gt;(a + __bound)&lt;/code&gt;，&lt;code&gt;__bound&lt;/code&gt; 为数组长度，我们要求数组是有确定长度的。&lt;/p&gt;
 &lt;p&gt;对于定义了 &lt;code&gt;begin&lt;/code&gt; 和 &lt;code&gt;end&lt;/code&gt; 的对象 &lt;code&gt;b&lt;/code&gt;，其首表达式为 &lt;code&gt;b.begin()&lt;/code&gt;，尾表达式为 &lt;code&gt;b.end()&lt;/code&gt;。&lt;/p&gt;
-&lt;p&gt;否则，通过实参依赖查找&lt;sup class=&#34;footnote-ref&#34;&gt;&lt;a href=&#34;#fn8&#34; id=&#34;fnref8&#34;&gt;[8]&lt;/a&gt;&lt;/sup&gt;进行查找。&lt;/p&gt;
+&lt;p&gt;否则，通过实参依赖查找&lt;sup class=&#34;footnote-ref&#34;&gt;&lt;a href=&#34;#fn12&#34; id=&#34;fnref12&#34;&gt;[12]&lt;/a&gt;&lt;/sup&gt;进行查找。&lt;/p&gt;
 &lt;p&gt;一些实际使用的例子&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&#34;language-cpp&#34;&gt;vector&amp;lt;int&amp;gt; g[10005];
 for(auto v: g[u]){
@@ -1558,27 +1557,35 @@ input(x); // ok
 input(x, y, z); // ok
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;常用的变参数模板格式和上面大同小异，都是通过递归调用，&lt;code&gt;input(Type&amp;amp; arg, Types&amp;amp;... args)&lt;/code&gt; 递归变参函数，&lt;code&gt;input(args...)&lt;/code&gt; 就是在进行递归调用，我们当然需要给这样一个递归函数一个终止条件，&lt;code&gt;input()&lt;/code&gt; 被称为基础函数，递归变参数函数最终在这里停止。&lt;/p&gt;
-&lt;p&gt;如果你想了解更多关于变参数模板和形参包的内容，同样可以参考 cppreference&lt;sup class=&#34;footnote-ref&#34;&gt;&lt;a href=&#34;#fn9&#34; id=&#34;fnref9&#34;&gt;[9]&lt;/a&gt;&lt;/sup&gt;。&lt;/p&gt;
+&lt;p&gt;如果你想了解更多关于变参数模板和形参包的内容，同样可以参考 cppreference&lt;sup class=&#34;footnote-ref&#34;&gt;&lt;a href=&#34;#fn13&#34; id=&#34;fnref13&#34;&gt;[13]&lt;/a&gt;&lt;/sup&gt;。&lt;/p&gt;
 &lt;hr class=&#34;footnotes-sep&#34;&gt;
 &lt;section class=&#34;footnotes&#34;&gt;
 &lt;ol class=&#34;footnotes-list&#34;&gt;
 &lt;li id=&#34;fn1&#34; class=&#34;footnote-item&#34;&gt;&lt;p&gt;https://zh.cppreference.com/w/cpp/language/constexpr &lt;a href=&#34;#fnref1&#34; class=&#34;footnote-backref&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
-&lt;li id=&#34;fn2&#34; class=&#34;footnote-item&#34;&gt;&lt;p&gt;https://zh.cppreference.com/w/cpp/language/lambda &lt;a href=&#34;#fnref2&#34; class=&#34;footnote-backref&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;
+&lt;li id=&#34;fn2&#34; class=&#34;footnote-item&#34;&gt;&lt;p&gt;https://www.bogotobogo.com/cplusplus/C11/C11_lambda_functions_expressions.php &lt;a href=&#34;#fnref2&#34; class=&#34;footnote-backref&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
-&lt;li id=&#34;fn3&#34; class=&#34;footnote-item&#34;&gt;&lt;p&gt;https://zh.cppreference.com/w/cpp/language/list_initialization &lt;a href=&#34;#fnref3&#34; class=&#34;footnote-backref&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;
+&lt;li id=&#34;fn3&#34; class=&#34;footnote-item&#34;&gt;&lt;p&gt;https://zh.cppreference.com/w/cpp/language/lambda &lt;a href=&#34;#fnref3&#34; class=&#34;footnote-backref&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
-&lt;li id=&#34;fn4&#34; class=&#34;footnote-item&#34;&gt;&lt;p&gt;https://stackoverflow.com/questions/41573959/aggregate-member-initialization-in-c14 &lt;a href=&#34;#fnref4&#34; class=&#34;footnote-backref&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;
+&lt;li id=&#34;fn4&#34; class=&#34;footnote-item&#34;&gt;&lt;p&gt;https://zh.cppreference.com/w/cpp/language/variable_template &lt;a href=&#34;#fnref4&#34; class=&#34;footnote-backref&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
-&lt;li id=&#34;fn5&#34; class=&#34;footnote-item&#34;&gt;&lt;p&gt;http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2013/n3605.html?cm_mc_uid=02271754051914834448186&amp;amp;cm_mc_sid_50200000=1484048606 &lt;a href=&#34;#fnref5&#34; class=&#34;footnote-backref&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;
+&lt;li id=&#34;fn5&#34; class=&#34;footnote-item&#34;&gt;&lt;p&gt;https://zh.cppreference.com/w/cpp/language/list_initialization &lt;a href=&#34;#fnref5&#34; class=&#34;footnote-backref&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
-&lt;li id=&#34;fn6&#34; class=&#34;footnote-item&#34;&gt;&lt;p&gt;https://zh.cppreference.com/w/cpp/language/auto &lt;a href=&#34;#fnref6&#34; class=&#34;footnote-backref&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;
+&lt;li id=&#34;fn6&#34; class=&#34;footnote-item&#34;&gt;&lt;p&gt;https://stackoverflow.com/questions/41573959/aggregate-member-initialization-in-c14 &lt;a href=&#34;#fnref6&#34; class=&#34;footnote-backref&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
-&lt;li id=&#34;fn7&#34; class=&#34;footnote-item&#34;&gt;&lt;p&gt;https://zh.cppreference.com/w/cpp/language/attributes &lt;a href=&#34;#fnref7&#34; class=&#34;footnote-backref&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;
+&lt;li id=&#34;fn7&#34; class=&#34;footnote-item&#34;&gt;&lt;p&gt;http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2013/n3605.html?cm_mc_uid=02271754051914834448186&amp;amp;cm_mc_sid_50200000=1484048606 &lt;a href=&#34;#fnref7&#34; class=&#34;footnote-backref&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
-&lt;li id=&#34;fn8&#34; class=&#34;footnote-item&#34;&gt;&lt;p&gt;https://zh.cppreference.com/w/cpp/language/adl &lt;a href=&#34;#fnref8&#34; class=&#34;footnote-backref&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;
+&lt;li id=&#34;fn8&#34; class=&#34;footnote-item&#34;&gt;&lt;p&gt;https://blog.csdn.net/aaron19890330/article/details/82898306#3.1%20auto &lt;a href=&#34;#fnref8&#34; class=&#34;footnote-backref&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
-&lt;li id=&#34;fn9&#34; class=&#34;footnote-item&#34;&gt;&lt;p&gt;https://zh.cppreference.com/w/cpp/language/parameter_pack &lt;a href=&#34;#fnref9&#34; class=&#34;footnote-backref&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;
+&lt;li id=&#34;fn9&#34; class=&#34;footnote-item&#34;&gt;&lt;p&gt;https://zh.cppreference.com/w/cpp/language/auto &lt;a href=&#34;#fnref9&#34; class=&#34;footnote-backref&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn10&#34; class=&#34;footnote-item&#34;&gt;&lt;p&gt;https://zh.cppreference.com/w/cpp/language/range-for &lt;a href=&#34;#fnref10&#34; class=&#34;footnote-backref&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn11&#34; class=&#34;footnote-item&#34;&gt;&lt;p&gt;https://zh.cppreference.com/w/cpp/language/attributes &lt;a href=&#34;#fnref11&#34; class=&#34;footnote-backref&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn12&#34; class=&#34;footnote-item&#34;&gt;&lt;p&gt;https://zh.cppreference.com/w/cpp/language/adl &lt;a href=&#34;#fnref12&#34; class=&#34;footnote-backref&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn13&#34; class=&#34;footnote-item&#34;&gt;&lt;p&gt;https://zh.cppreference.com/w/cpp/language/parameter_pack &lt;a href=&#34;#fnref13&#34; class=&#34;footnote-backref&#34;&gt;↩︎&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;/section&gt;

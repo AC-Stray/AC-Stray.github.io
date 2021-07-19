@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://liuxizai.ac.cn</id>
     <title>Liuxizai</title>
-    <updated>2021-07-19T08:47:09.926Z</updated>
+    <updated>2021-07-19T08:50:41.885Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://liuxizai.ac.cn"/>
     <link rel="self" href="https://liuxizai.ac.cn/atom.xml"/>
@@ -16,12 +16,8 @@
         <link href="https://liuxizai.ac.cn/post/notes-cpp14/">
         </link>
         <updated>2021-07-19T08:30:07.000Z</updated>
-        <summary type="html"><![CDATA[<p>基于 Ubuntu 20.04 的 NOI 2.0 发布后，我们或许有机会开始使用 C++14。</p>
-<p>这篇 Blog 将对 OI 中可能会使用到的 C++14 的新特性进行简要总结。</p>
-]]></summary>
         <content type="html"><![CDATA[<p>基于 Ubuntu 20.04 的 NOI 2.0 发布后，我们或许有机会开始使用 C++14。</p>
 <p>这篇 Blog 将对 OI 中可能会使用到的 C++14 的新特性进行简要总结。</p>
-<!-- more -->
 <blockquote>
 <p>由于大部分 OIer <s>被 CCF 迫害</s>可能是 C++98 转 C++14，文中部分特性实际上是来源于 C++11 标准的。</p>
 <p>另一个重要原因是，C++14 并不是 C++ 的一个主要版本（主要版本：C++03 C++11 C++17），其被认为是 C++11 一个更加完善的版本，C++11 这一更新经历了整整8年时间，引入了大量更改，可以说是 C++98 以来最重要的更新，所以提到 C++11 的特性确实很有必要。</p>
@@ -72,7 +68,7 @@ int a = 10; // yes
 </ul>
 <p>为了方便 OIer 理解，以上内容并不完全准确<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup>。</p>
 <h2 id="lambda">lambda</h2>
-<p>C++11 中允许使用匿名函数，其能够内联于语句中</p>
+<p>C++11 中允许使用匿名函数，其能够内联于语句中<sup class="footnote-ref"><a href="#fn2" id="fnref2">[2]</a></sup></p>
 <pre><code class="language-cpp">struct node { int x, y; };
 std::vector&lt;node&gt; arr;
 
@@ -97,12 +93,12 @@ std::sort(arr.begin(), arr.end(), [](node a, node b){ return a.x &lt; b.x; });
 <li><code>[&amp;, list]</code>  - <code>list</code> 是一个逗号分割的列表，列表中的变量以值方式捕获，其他局部变量隐式的以引用方式捕获。</li>
 <li><code>[=, list]</code> - <code>list</code> 是一个逗号分割的列表，列表中的变量以引用方式捕获，其他局部变量隐式的以值方式捕获。</li>
 </ul>
-<p>C++14 标准中规定了泛型 <code>lambda</code>，由于过于复杂，选择不将其写入 Blog<sup class="footnote-ref"><a href="#fn2" id="fnref2">[2]</a></sup>。</p>
+<p>C++14 标准中规定了泛型 <code>lambda</code>，由于过于复杂，选择不将其写入 Blog<sup class="footnote-ref"><a href="#fn3" id="fnref3">[3]</a></sup>。</p>
 <p>另外，你会发现匿名函数没有规定返回值，编译器将会自行判断函数的返回值，如果需要指定函数返回值，可以使用以下语法</p>
 <pre><code class="language-cpp">[捕获](形参)-&gt;返回值类型 {函数体}
 </code></pre>
 <h2 id="变量模板variable-template">变量模板（variable template）</h2>
-<p>C++14 允许通过变量模板定义一族变量。</p>
+<p>C++14 允许通过变量模板定义一族变量<sup class="footnote-ref"><a href="#fn4" id="fnref4">[4]</a></sup>。</p>
 <pre><code class="language-cpp">template&lt;typename T&gt; // variable template
 const T pi = T(3.14159265);
 
@@ -112,7 +108,7 @@ T circleArea(T r){
 }
 </code></pre>
 <h2 id="聚合初始化aggregate-initialization">聚合初始化（aggregate initialization）</h2>
-<p>聚合初始化是 C++11 中列表初始化<sup class="footnote-ref"><a href="#fn3" id="fnref3">[3]</a></sup>的一种形式。</p>
+<p>聚合初始化是 C++11 中列表初始化<sup class="footnote-ref"><a href="#fn5" id="fnref5">[5]</a></sup>的一种形式。</p>
 <p>首先，聚合体是下列类型之一：</p>
 <ul>
 <li>数组类型</li>
@@ -165,7 +161,7 @@ e = 4;
 f = {5, 6};
 </code></pre>
 <p>在 C++11 中，聚合初始化要求类成员没有默认初始化器（<code>int a = 10</code>），但在 C++14 中允许我们这么做，所以另外很重要的一点是，当聚合初始化与默认初始化器结合时，到底会产生怎么样的结果。</p>
-<p>举个例子说明<sup class="footnote-ref"><a href="#fn4" id="fnref4">[4]</a></sup></p>
+<p>举个例子说明<sup class="footnote-ref"><a href="#fn6" id="fnref6">[6]</a></sup></p>
 <pre><code class="language-cpp">struct A {
     struct B {
         int a = 21;
@@ -202,7 +198,7 @@ b2.c = 13;
 b2.d = 0;
 b2.e = 23;
 </code></pre>
-<p>初始化器提供的值比类成员少时，根据 N3605<sup class="footnote-ref"><a href="#fn5" id="fnref5">[5]</a></sup>，C++14 会采用如下策略</p>
+<p>初始化器提供的值比类成员少时，根据 N3605<sup class="footnote-ref"><a href="#fn7" id="fnref7">[7]</a></sup>，C++14 会采用如下策略</p>
 <ul>
 <li>从成员的默认初始化器进行初始化</li>
 <li>如果没有默认初始化器，用一个空初始化器列表进行初始化</li>
@@ -210,7 +206,7 @@ b2.e = 23;
 <p>那么，我们在对 <code>a</code> 进行聚合初始化时， 实际上为 <code>b2</code> 提供了值 <code>{1}</code>，所以 <code>b2</code> 的初始化器<strong>完全失效</strong>，接下来，<code>b2.a</code> 从聚合初始化中的到了值，其他成员没有得到值，所以隐式的按照 N3605 进行初始化。</p>
 <p>这正是我们得到的结果。</p>
 <h2 id="auto">auto</h2>
-<p><code>auto</code> 于 C++11 引入作为占位类型说明符，其能够从初始化器自动推导变量类型。</p>
+<p><code>auto</code> 于 C++11 引入作为占位类型说明符，其能够从初始化器自动推导变量类型<sup class="footnote-ref"><a href="#fn8" id="fnref8">[8]</a></sup>。</p>
 <pre><code class="language-cpp">auto a = 12;        // int
 auto b = 2 + 4 * 7; // int
 auto c = 0.17;      // double
@@ -238,9 +234,9 @@ auto y = 10; // ok
 <blockquote>
 <p><code>auto x;</code> 这种写法在 C 中被允许。</p>
 </blockquote>
-<p>如果想要了解更多，可以参考 cppreference<sup class="footnote-ref"><a href="#fn6" id="fnref6">[6]</a></sup>。</p>
+<p>如果想要了解更多，可以参考 cppreference<sup class="footnote-ref"><a href="#fn9" id="fnref9">[9]</a></sup>。</p>
 <h2 id="基于范围的-for-循环range-based-for-loop">基于范围的 for 循环（range-based for loop）</h2>
-<p>C++11 规定了基于范围的 <code>for</code> 循环，其在一个范围上执行 <code>for</code> 循环，是传统 <code>for</code> 循环一个更加可读的等价版本，OI 中常用于图遍历。</p>
+<p>C++11 规定了基于范围的 <code>for</code> 循环，其在一个范围上执行 <code>for</code> 循环，是传统 <code>for</code> 循环一个更加可读的等价版本<sup class="footnote-ref"><a href="#fn10" id="fnref10">[10]</a></sup>，OI 中常用于图遍历。</p>
 <p>其语法如下</p>
 <pre><code class="language-cpp">[属性-可选]
 for(范围声明: 范围表达式){
@@ -248,7 +244,7 @@ for(范围声明: 范围表达式){
 }
 </code></pre>
 <blockquote>
-<p>属性：属性说明符序列<sup class="footnote-ref"><a href="#fn7" id="fnref7">[7]</a></sup>，不在 Blog 中进行说明，几乎不会用到。</p>
+<p>属性：属性说明符序列<sup class="footnote-ref"><a href="#fn11" id="fnref11">[11]</a></sup>，不在 Blog 中进行说明，几乎不会用到。</p>
 </blockquote>
 <ul>
 <li>
@@ -269,7 +265,7 @@ for(范围声明: 范围表达式){
 </code></pre>
 <p>其中，对于数组 <code>a[]</code>，其首表达式为 <code>a</code>，尾表达式为 <code>(a + __bound)</code>，<code>__bound</code> 为数组长度，我们要求数组是有确定长度的。</p>
 <p>对于定义了 <code>begin</code> 和 <code>end</code> 的对象 <code>b</code>，其首表达式为 <code>b.begin()</code>，尾表达式为 <code>b.end()</code>。</p>
-<p>否则，通过实参依赖查找<sup class="footnote-ref"><a href="#fn8" id="fnref8">[8]</a></sup>进行查找。</p>
+<p>否则，通过实参依赖查找<sup class="footnote-ref"><a href="#fn12" id="fnref12">[12]</a></sup>进行查找。</p>
 <p>一些实际使用的例子</p>
 <pre><code class="language-cpp">vector&lt;int&gt; g[10005];
 for(auto v: g[u]){
@@ -302,27 +298,35 @@ input(x); // ok
 input(x, y, z); // ok
 </code></pre>
 <p>常用的变参数模板格式和上面大同小异，都是通过递归调用，<code>input(Type&amp; arg, Types&amp;... args)</code> 递归变参函数，<code>input(args...)</code> 就是在进行递归调用，我们当然需要给这样一个递归函数一个终止条件，<code>input()</code> 被称为基础函数，递归变参数函数最终在这里停止。</p>
-<p>如果你想了解更多关于变参数模板和形参包的内容，同样可以参考 cppreference<sup class="footnote-ref"><a href="#fn9" id="fnref9">[9]</a></sup>。</p>
+<p>如果你想了解更多关于变参数模板和形参包的内容，同样可以参考 cppreference<sup class="footnote-ref"><a href="#fn13" id="fnref13">[13]</a></sup>。</p>
 <hr class="footnotes-sep">
 <section class="footnotes">
 <ol class="footnotes-list">
 <li id="fn1" class="footnote-item"><p>https://zh.cppreference.com/w/cpp/language/constexpr <a href="#fnref1" class="footnote-backref">↩︎</a></p>
 </li>
-<li id="fn2" class="footnote-item"><p>https://zh.cppreference.com/w/cpp/language/lambda <a href="#fnref2" class="footnote-backref">↩︎</a></p>
+<li id="fn2" class="footnote-item"><p>https://www.bogotobogo.com/cplusplus/C11/C11_lambda_functions_expressions.php <a href="#fnref2" class="footnote-backref">↩︎</a></p>
 </li>
-<li id="fn3" class="footnote-item"><p>https://zh.cppreference.com/w/cpp/language/list_initialization <a href="#fnref3" class="footnote-backref">↩︎</a></p>
+<li id="fn3" class="footnote-item"><p>https://zh.cppreference.com/w/cpp/language/lambda <a href="#fnref3" class="footnote-backref">↩︎</a></p>
 </li>
-<li id="fn4" class="footnote-item"><p>https://stackoverflow.com/questions/41573959/aggregate-member-initialization-in-c14 <a href="#fnref4" class="footnote-backref">↩︎</a></p>
+<li id="fn4" class="footnote-item"><p>https://zh.cppreference.com/w/cpp/language/variable_template <a href="#fnref4" class="footnote-backref">↩︎</a></p>
 </li>
-<li id="fn5" class="footnote-item"><p>http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2013/n3605.html?cm_mc_uid=02271754051914834448186&amp;cm_mc_sid_50200000=1484048606 <a href="#fnref5" class="footnote-backref">↩︎</a></p>
+<li id="fn5" class="footnote-item"><p>https://zh.cppreference.com/w/cpp/language/list_initialization <a href="#fnref5" class="footnote-backref">↩︎</a></p>
 </li>
-<li id="fn6" class="footnote-item"><p>https://zh.cppreference.com/w/cpp/language/auto <a href="#fnref6" class="footnote-backref">↩︎</a></p>
+<li id="fn6" class="footnote-item"><p>https://stackoverflow.com/questions/41573959/aggregate-member-initialization-in-c14 <a href="#fnref6" class="footnote-backref">↩︎</a></p>
 </li>
-<li id="fn7" class="footnote-item"><p>https://zh.cppreference.com/w/cpp/language/attributes <a href="#fnref7" class="footnote-backref">↩︎</a></p>
+<li id="fn7" class="footnote-item"><p>http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2013/n3605.html?cm_mc_uid=02271754051914834448186&amp;cm_mc_sid_50200000=1484048606 <a href="#fnref7" class="footnote-backref">↩︎</a></p>
 </li>
-<li id="fn8" class="footnote-item"><p>https://zh.cppreference.com/w/cpp/language/adl <a href="#fnref8" class="footnote-backref">↩︎</a></p>
+<li id="fn8" class="footnote-item"><p>https://blog.csdn.net/aaron19890330/article/details/82898306#3.1%20auto <a href="#fnref8" class="footnote-backref">↩︎</a></p>
 </li>
-<li id="fn9" class="footnote-item"><p>https://zh.cppreference.com/w/cpp/language/parameter_pack <a href="#fnref9" class="footnote-backref">↩︎</a></p>
+<li id="fn9" class="footnote-item"><p>https://zh.cppreference.com/w/cpp/language/auto <a href="#fnref9" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="fn10" class="footnote-item"><p>https://zh.cppreference.com/w/cpp/language/range-for <a href="#fnref10" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="fn11" class="footnote-item"><p>https://zh.cppreference.com/w/cpp/language/attributes <a href="#fnref11" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="fn12" class="footnote-item"><p>https://zh.cppreference.com/w/cpp/language/adl <a href="#fnref12" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="fn13" class="footnote-item"><p>https://zh.cppreference.com/w/cpp/language/parameter_pack <a href="#fnref13" class="footnote-backref">↩︎</a></p>
 </li>
 </ol>
 </section>
